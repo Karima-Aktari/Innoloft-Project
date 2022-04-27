@@ -43,7 +43,7 @@ const ProductPage = () => {
                             <h1 className="text-3xl font-bold">{product?.name}</h1>
                             <h1 className="text-xl font-bold">{product?.type.name}</h1>
                         </div>
-                        <div className="w-full">
+                        <div className="w-full px-3 bg-red-200">
                             <button
                                 onClick={() => setToggle()}
                                 className="bg-pink-600 text-center text-xl w-1/2 text-slate-200 py-2"
@@ -82,14 +82,23 @@ const ProductPage = () => {
                                             </h1>
                                         </div>
                                     ))}
-
+                                {
+                                    trl &&
+                                    trl.map((tr) => (
+                                        <div className="py-2">
+                                            <h2 className="text-md font-bold">{tr.name}</h2>
+                                        </div>
+                                    ))
+                                }
 
                             </div>
 
                         </div>
                     </div>
                     <div className="h-full mt-0 pt-0">
-                        <div className="bg-gray-400 rounded p-4">
+                        <div className="bg-gray-400 rounded p-4" data-aos="fade-down"
+                            data-aos-easing="linear"
+                            data-aos-duration="1500">
                             <img
                                 src={product?.user.profilePicture}
                                 className="w-full rounded"
@@ -100,7 +109,8 @@ const ProductPage = () => {
                             </h1>
                             <h2 className="text-xl font-bold">{product?.company.name}</h2>
                         </div>
-                        <div className="p-3 border">
+                        <div className="p-3 bg-green-300 border" data-aos="fade-up"
+                            data-aos-duration="3000">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10091.114733317616!2d6.1006609!3d50.7796761!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb82ea0594132a59!2sInnoloft%20GmbH!5e0!3m2!1sen!2sbd!4v1651054603065!5m2!1sen!2sbd"
                                 width="100%"
