@@ -13,8 +13,7 @@ const Dashboard = () => {
                         <NavLink to="/dashBoard/productpage">Product</NavLink>
                     </div>
                 </div>
-                <div className='col-span-4 mx-5'>
-
+                <div className='md:col-span-4 mx-5'>
                     <Outlet></Outlet>
                 </div>
             </div>
